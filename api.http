@@ -1,0 +1,29 @@
+POST http://localhost:3333/events
+Content-Type: application/json
+
+{
+    "title": 123,
+    "details": null,
+    "maximumAttendees": 1
+}
+
+###
+POST http://localhost:3333/events/e560ba6f-d925-468a-b639-fb926537bc50/attendees
+Content-Type: application/json
+
+{
+    "name": "Gui de Paula",
+    "email": "guilherme_grd1p@hotmail.com"
+}
+
+###
+GET http://localhost:3333/events/e560ba6f-d925-468a-b639-fb926537bc50
+
+###
+GET  http://localhost:3333/attendees/4/badge
+
+###
+GET  http://localhost:3333/attendees/4/check-in
+
+###
+GET http://localhost:3333/events/e560ba6f-d925-468a-b639-fb926537bc50/attendees?query=gui
